@@ -37,7 +37,7 @@ public class CategoryController {
 	}
 
 	@GetMapping(value = "/")
-	public List<Category> get() {
+	public List<Category> getAll() {
 		return impl.getAll();
 	}
 
@@ -64,7 +64,7 @@ public class CategoryController {
 	}
 
 	@DeleteMapping("/{id}")
-	public ResponseEntity<Void> deleteTodo(@PathVariable int id) {
+	public ResponseEntity<Void> deleteCategory(@PathVariable int id) {
 		catRepository.deleteById(id);
 		return ResponseEntity.noContent().build();
 	}
