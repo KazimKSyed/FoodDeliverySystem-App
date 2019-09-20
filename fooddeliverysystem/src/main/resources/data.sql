@@ -51,6 +51,8 @@ CREATE TABLE product (
 	supplier_id INT,
 	purchases INT DEFAULT 0,
 	views INT DEFAULT 0,
+        File_Path VARCHAR(225),
+	
 	CONSTRAINT pk_product_id PRIMARY KEY (id),
  	CONSTRAINT fk_product_category_id FOREIGN KEY (category_id) REFERENCES category (id),
 	CONSTRAINT fk_product_supplier_id FOREIGN KEY (supplier_id) REFERENCES user_detail(id),	
@@ -58,11 +60,11 @@ CREATE TABLE product (
 
 
 
-INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ( 'Fresho Tomato - Hybrid', 'Indian Farmers', 'Tomato Hybrids are high-quality fruits compared to desi, local tomatoes. They contain numerous edible seeds and are red in colour due to lycopene, an anti-oxidant.', 19, 50, true, 1, 1, 0, 0 );
-INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ( 'Fresho Potato', 'Indian Farmers', 'Fresho Potatoes are nutrient-dense, non-fattening and have reasonable amount of calories.', 25, 50, true, 1, 1, 0, 0 );
-INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES ('Fresho Banana - Robusta', 'Indian Farmers', 'Relish the soft, buttery texture of Robusta bananas that are light green and have a great fragrance and taste.',39, 50, true, 2, 2, 0, 0 );
-INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views)
-VALUES (' Amul Butter - Pasteurized', 'Amul', 'Amul is synonymous with Butter in India.', 450, 200, true, 3, 3, 0, 0 );
+INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views, File_Path)
+VALUES ( 'Fresho Tomato - Hybrid', 'Indian Farmers', 'Tomato Hybrids are high-quality fruits compared to desi, local tomatoes. They contain numerous edible seeds and are red in colour due to lycopene, an anti-oxidant.', 19, 50, true, 1, 1, 0, 0,'ok');
+INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views, File_Path)
+VALUES ( 'Fresho Potato', 'Indian Farmers', 'Fresho Potatoes are nutrient-dense, non-fattening and have reasonable amount of calories.', 25, 50, true, 1, 1, 0, 0,'ok');
+INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views, File_Path)
+VALUES ('Fresho Banana - Robusta', 'Indian Farmers', 'Relish the soft, buttery texture of Robusta bananas that are light green and have a great fragrance and taste.',39, 50, true, 2, 2, 0, 0,'ok' );
+INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views, File_Path)
+VALUES (' Amul Butter - Pasteurized', 'Amul', 'Amul is synonymous with Butter in India.', 450, 200, true, 3, 3, 0, 0,'ok' );

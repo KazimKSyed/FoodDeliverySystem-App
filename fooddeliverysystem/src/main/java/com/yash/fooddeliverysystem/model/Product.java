@@ -5,6 +5,12 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
+import javax.persistence.Transient;
+
+import org.springframework.web.multipart.MultipartFile;
+
+
 
 @Entity
 public class Product {
@@ -25,6 +31,25 @@ public class Product {
 	private int supplierId;
 	private int purchases;
 	private int views;
+	@Transient
+	private byte[]  imgSrc;
+	@Column(name="File_Path")
+	private String filePath;
+	
+	public String getFilePath() {
+		return filePath;
+	}
+	public void setFilePath(String filePath) {
+		this.filePath = filePath;
+	}
+
+	
+	public byte[] getImgSrc() {
+		return imgSrc;
+	}
+	public void setImgSrc(byte[] imgSrc) {
+		this.imgSrc = imgSrc;
+	}
 	public int getId() {
 		return id;
 	}
