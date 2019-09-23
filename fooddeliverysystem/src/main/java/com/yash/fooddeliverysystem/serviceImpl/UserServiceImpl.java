@@ -26,5 +26,19 @@ public class UserServiceImpl implements UserService{
 		return userRepo.findAll();
 	}
 
+	@Override
+	public User findByEmailAndPassword(String email, String password) {
+		
+		return userRepo.findByEmailAndPassword(email, password);
+	}
+
+	@Override
+	public void deleteUser(int id) {
+		userRepo.deleteById(id);
+		
+	}
+
+	
+
 	
 }

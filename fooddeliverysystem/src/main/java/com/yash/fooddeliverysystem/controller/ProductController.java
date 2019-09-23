@@ -36,7 +36,7 @@ public class ProductController {
 	
 	@Autowired
 	ServletContext context;
-//	String uploadfolder = "D://images";
+
 	@GetMapping(value = "/{id}")
 	public Product getProduct(@PathVariable int id) {
 		return impl.get(id);

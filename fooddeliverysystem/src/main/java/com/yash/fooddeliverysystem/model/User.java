@@ -1,10 +1,13 @@
 package com.yash.fooddeliverysystem.model;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.NotBlank;
@@ -32,6 +35,15 @@ public class User {
 	private boolean enabled = true;
 	@Transient
 	private String confirmPassword;
+	
+	@OneToOne(mappedBy="user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+	private Cart cart;
+	public Cart getCart() {
+		return cart;
+	}
+	public void setCart(Cart cart) {
+		this.cart = cart;
+	}
 
 	public String getConfirmPassword() {
 		return confirmPassword;

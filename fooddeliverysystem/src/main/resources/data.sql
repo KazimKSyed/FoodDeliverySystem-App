@@ -36,7 +36,7 @@ INSERT INTO user_detail
 VALUES ('Ravichandra', 'Ashwin', 'SUPPLIER', true, '12345', 'ra@gmail.com', '7777777777');
 INSERT INTO user_detail 
 (first_name, last_name, role, enabled, password, email, contact_number) 
-VALUES ('Khozema', 'Nullwala', 'USER', true, '12345', 'kn@gmail.com', '7777777777');
+VALUES ('Kazim', 'Syed', 'USER', true, '12345', 'syedkazim56@gmail.com', '7777777777');
 
 DROP TABLE IF EXISTS product;
 CREATE TABLE product (
@@ -65,6 +65,6 @@ VALUES ( 'Fresho Tomato - Hybrid', 'Indian Farmers', 'Tomato Hybrids are high-qu
 INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views, File_Path)
 VALUES ( 'Fresho Potato', 'Indian Farmers', 'Fresho Potatoes are nutrient-dense, non-fattening and have reasonable amount of calories.', 25, 50, true, 1, 1, 0, 0,'ok');
 INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views, File_Path)
-VALUES ('Fresho Banana - Robusta', 'Indian Farmers', 'Relish the soft, buttery texture of Robusta bananas that are light green and have a great fragrance and taste.',39, 50, true, 2, 2, 0, 0,'ok' );
+VALUES ('Fresho Banana - Robusta', 'Indian Farmers', 'Relish the soft, buttery texture of Robusta bananas that are light green and have a great fragrance and taste.',39, 50, true, 2, 2, 0, 0,'banana.jpg' );
 INSERT INTO product ( name, brand, description, unit_price, quantity, is_active, category_id, supplier_id, purchases, views, File_Path)
 VALUES (' Amul Butter - Pasteurized', 'Amul', 'Amul is synonymous with Butter in India.', 450, 200, true, 3, 3, 0, 0,'ok' );
